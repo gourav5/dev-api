@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  # app:
+  #   build:
+  #     context: ./api
+  #   container_name: flask-app
+  #   ports:
+  #     - "5005:5005"
+  #   networks:
+  #     - api_default
+
+  nginx:
+    image: api_all-nginx  # Changed `from` to `image` for proper Docker Compose syntax
+    container_name: web-server-nginx
+    ports:
+      - "6060:6060"
+    networks:
+      - api_default
+
+networks:
+  api_default:
+    external: true
+
