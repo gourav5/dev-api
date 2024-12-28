@@ -1,6 +1,8 @@
 # Use Python base image
 FROM python:3.9-slim
 
+RUN mkdir /logs
+RUN chmod 755 /logs
 # Set working directory
 WORKDIR /app
 
