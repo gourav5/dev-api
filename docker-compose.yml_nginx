@@ -1,18 +1,18 @@
 version: '3.8'
 services:
-  app:
-    build:
-      context: ./api
-    container_name: api-container
-    ports:
-      - "5005:5005"
-    networks:
-      - api_default
+  #  app:
+  #    build:
+  #    context: ./api
+  #  container_name: flask-app
+  #  ports:
+  #    - "5005:5005"
+  #  networks:
+  #   - api_default
 
   nginx:
     build:
       context: ./nginx
-    container_name: nginx-container
+    container_name: api-nginx-server2
     ports:
       - "7070:7070"
       - "6060:6060"
