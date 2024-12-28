@@ -14,7 +14,7 @@ services:
       context: ./nginx
     container_name: api-nginx-server2
     ports:
-      - "8070:8070"
+      - "7070:7070"
       - "6060:6060"
     networks:
       - api_default

@@ -8,6 +8,6 @@ COPY web.conf /etc/nginx/conf.d/
 RUN apt-get update -y
 RUN apt-get install vim -y
 # Expose the Nginx port
-EXPOSE 8070
+EXPOSE 7070
 EXPOSE 6060
 
