@@ -5,7 +5,7 @@ services:
       context: ./api
     container_name: api-container
     ports:
-      - "4040:5005"
+      - "5005:5005"
     networks:
       - api_default
 
@@ -14,8 +14,8 @@ services:
       context: ./nginx
     container_name: nginx-container
     ports:
-      - "8080:7070"
-      - "8080:6060"
+      - "7070:7070"
+      - "6060:6060"
     networks:
       - api_default
 
