@@ -66,12 +66,12 @@ def add_employees():
 
         # Insert query
         query = """
-        INSERT INTO employees (name, position, salary)
-        VALUES (%s, %s, %s)
+        INSERT INTO employees (name, position, salary, grade, EMAIL)
+        VALUES (%s, %s, %s, %s, %s)
         """
 
         # Prepare and execute queries for multiple rows
-        values = [(employee['name'], employee['position'], employee['salary']) for employee in data]
+        values = [(employee['name'], employee['position'], employee['salary'], employee['grade'], employee['EMAIL']) for employee in data]
         cursor.executemany(query, values)
         conn.commit()
 
