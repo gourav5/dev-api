@@ -95,7 +95,7 @@ def update_employee(employee_id):
             return jsonify({"error": "Database connection failed"}), 500
         cursor = connection.cursor()
         query = "UPDATE employees SET name=%s, position=%s, salary=%s, grade=%s, EMAIL=%s WHERE id=%s"
-        values = (data['name'], data['position'], data['salary'], data['grade'], data['EMAIL'] employee_id)
+        values = (data['name'], data['position'], data['salary'], data['grade'], data['EMAIL'], employee_id)
         cursor.execute(query, values)
         connection.commit()
         cursor.close()
