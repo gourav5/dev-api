@@ -8,7 +8,7 @@ CORS(app)
 
 # MySQL database connection configuration
 db_config = {
-    "host": "mysql",
+    "host": "mysql-container",
     "user": "testuser",
     "password": "testpassword",
     "database": "testdb"
